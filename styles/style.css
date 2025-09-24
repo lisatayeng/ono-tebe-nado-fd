@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 24px 92px 24px;
+  padding: 92px 22px 92px 22px;
 }
 
 .header__menu {
@@ -47,17 +47,18 @@
   font-size: 18px;
   line-height: 1.35;
   letter-spacing: 0.18px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Railway", sans-serif;
   font-style: normal;
-}
-
-.header__address {
-  justify-self: end;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 0;
 }
+
+.header__address {                                         
+  justify-self: end;  
+}
+
 
 .cover {
   position: relative;
@@ -85,13 +86,46 @@
   display: flex;
   flex-direction: column;
   padding: 165px 20px 106px 50px;
-  gap: 21px;
+  gap: 20px;
 }
 
-.cover__title span {
+.cover__title-line {
   font-size: 100px;
   font-weight: 700;
-  line-height: 1.14;
+  line-height: 1;
+  letter-spacing: 25px; /*  лишние пробелы */
+  display: block;
+}
+/* Первая строка "ОНО" */
+.cover__title-line:nth-child(1) {
+  margin-left: 28px;
+  margin-top: -15px;
+}
+
+/* Вторая строка "ТЕБЕ" */
+.cover__title-line:nth-child(2) {
+  margin-left: 340px;
+  margin-top: -10px;
+}
+
+/* Третья строка "НАДО" */
+.cover__title-line:nth-child(3) {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.cover__description {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 50px 51px;
+}
+.cover__text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  word-spacing: 19px;
+  color: white;
 }
 
 .text__cover {
@@ -102,7 +136,6 @@
 
 .text__middle {
   text-align: center;
-  line-height: 125px;
 }
 
 .text__last {
@@ -296,15 +329,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  padding: 181px 50px 88px;
+  padding: 180px 50px 82px;
 }
 
 .footer__address {
   justify-self: start;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+
 }
 
 .footer__menu {
